@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es" data-kind="artist">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.youtube.com; style-src 'self' 'unsafe-inline'; img-src https: data:; connect-src https://musicbrainz.org https://api.discogs.com https://ws.audioscrobbler.com https://www.googleapis.com; frame-src https://www.youtube.com https://www.youtube-nocookie.com; worker-src 'self'; base-uri 'none'; form-action 'none'">
+<link rel="stylesheet" href="../shared/theme-palettes.css">
+<link rel="stylesheet" href="../shared/style.css">
+<title>Charts de artistas</title>
+</head>
+<body>
+
+<div id="sidebar">
+  <div id="sb-head"><h1><span>▶</span> Charts de artistas</h1><a id="sb-switch" href="../sellos/">Sellos →</a><button id="grp-add" title="Crear un grupo">+ Grupo</button></div>
+  <div id="sb-list"></div>
+  <div id="sb-fetch">
+    <label for="fetch-id">Añadir un artista</label>
+    <div id="fetch-row">
+      <input id="fetch-id" type="text" placeholder="Nombre del artista…" autocomplete="off">
+      <button id="fetch-btn">Buscar</button>
+    </div>
+    <div id="cands" hidden></div>
+  </div>
+</div>
+
+<div id="grp-menu" hidden></div>
+
+<div id="job-float" hidden>
+  <div id="jf-head"><span id="jf-title"></span><button id="jf-close" title="Cerrar">×</button></div>
+  <div id="jf-name"></div>
+  <div id="jf-phase"><span id="jf-phase-txt"></span><span id="jf-pct"></span></div>
+  <div id="jf-bar"><div id="jf-fill"></div></div>
+  <div id="jf-current"></div>
+  <div id="jf-queue"></div>
+  <pre id="jf-log"></pre>
+</div>
+
+<div id="main">
+  <div id="grid-panel">
+    <div id="toolbar" style="display:none">
+      <span id="col-title"></span>
+      <input id="search" type="text" placeholder="Buscar disco o catálogo…" autocomplete="off">
+      <select id="tag-filter" title="Filtrar por etiqueta de Last.fm"><option value="">Todas las etiquetas</option></select>
+      <select id="sort" title="Ordenar">
+        <option value="year-desc">Más recientes</option>
+        <option value="listeners">Más oyentes</option>
+        <option value="playcount">Más escuchas</option>
+        <option value="year-asc">Más antiguos</option>
+        <option value="artist">Artista A-Z</option>
+      </select>
+      <button id="sec-edit" class="q-btn" title="Elegir qué secciones de este artista se muestran">Secciones</button>
+      <span id="grid-count"></span>
+    </div>
+    <div id="disco-info" hidden></div>
+    <div id="grid-wrap" style="display:none"><div id="grid"></div></div>
+    <div id="placeholder">
+      <span>🎵</span>
+      Busca un artista en el panel izquierdo
+      <div id="key-hint" hidden>Para ver oyentes, portadas y biografías, <button id="key-hint-btn">añade tu API key de Last.fm</button>.</div>
+    </div>
+  </div>
+  <div id="detail">
+    <div id="d-placeholder">← Selecciona un álbum</div>
+  </div>
+</div>
+
+<script type="module" src="../shared/app.js"></script>
+<script src="../shared/theme-picker.js"></script>
+</body>
+</html>
