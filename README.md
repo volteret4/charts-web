@@ -4,6 +4,8 @@ Escribes el nombre de un sello o de un artista y ves todo lo que ha publicado, c
 
 Es la versión para GitHub Pages de dos servicios con servidor, `charts_sellos` y `charts_artistas`. Aquellos son más rápidos y buscan los vídeos por adelantado con `yt-dlp`.
 
+Forma parte de [REPEAT-ONE](https://volteret4.github.io/repeat-one-web/). Para instalar las versiones con servidor, [mira su instalación](https://github.com/volteret4/repeat-one-web#instalación).
+
 ## Uso
 
 Pulsa ⚙ y añade tus claves. Se quedan en este navegador y solo se envían a la API de cada servicio.
